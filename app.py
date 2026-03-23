@@ -41,7 +41,7 @@ MONITOR_URLS = [
     },
     {
         "name": "RCB Official - Tickets",
-        "url": "https://www.royalchallengers.com/tickets",
+        "url": "https://www.royalchallengers.com/",
     },
     {
         "name": "District (Zomato) - RCB Tickets",
