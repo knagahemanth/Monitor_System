@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: rcb-ticket-monitor
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --threads 2
+    envVars:
+      - key: ALERT_EMAIL
+        value: your@email.com        # ← Replace with your email
+      - key: SMTP_EMAIL
+        value: yourgmail@gmail.com   # ← Replace with your Gmail
+      - key: SMTP_PASSWORD
+        value: your_app_password     # ← Replace with Gmail App Password
+      - key: CHECK_INTERVAL
+        value: "60"
